@@ -263,6 +263,12 @@ pub fn handle_action_in_context(
                 client_pub.send(ClientRequest::AddAlbumToQueue(album.id))?;
                 ui.popup = None;
             }
+            Action::PlayAlbum => {
+                client_pub.send(ClientRequest::Player(PlayerRequest::StartPlayback(
+                    Playback::Context(ContextId::Album(album.id), None),
+                    None
+                )))?;
+            }
             _ => {}
         },
         ActionContext::Artist(artist) => match action {

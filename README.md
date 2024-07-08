@@ -394,6 +394,7 @@ List of available actions:
 - `CopyLink`
 - `Follow`
 - `Unfollow`
+- `PlayAlbum`
 
 These actions can also be bound to a shortcut. To add new shortcuts, please refer to the [actions section](docs/config.md#actions) in the configuration documentation.
 
